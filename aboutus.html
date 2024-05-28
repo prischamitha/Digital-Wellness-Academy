@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DigitalWellnessAcademy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding:30px 25px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  color: lightpink;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+.container {  
+  padding-left:5%;
+  padding-right:5%;
+  margin-top:20px;
+  width:100%;
+  color:white;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color:white;
+  background-color: #333;
+}
+
+.title-paragraf{
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:40px;
+}
+
+.paragraf{
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:25px;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.responsive-cell-block {
+  min-height: 75px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
+
+.outer-container {
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  background-color: rgb(244, 252, 255);
+}
+
+.inner-container {
+  max-width: 1320px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.section-head-text {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 48px;
+  color: rgb(0, 135, 177);
+  margin: 0 0 10px 0;
+}
+
+.section-subhead-text {
+  font-size: 25px;
+  color: rgb(153, 153, 153);
+  line-height: 35px;
+  max-width: 470px;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 60px;
+  margin-left: 0px;
+}
+
+.img-wrapper {
+  width: 100%;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-links {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(102, 102, 102);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+.position {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(0, 135, 177);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-card-container {
+  width: 280px;
+  margin: 0 0 40px 0;
+}
+
+.round-image {
+    width: 80%; /* Adjust the size as needed */
+    height: 80%; /* Adjust the size as needed */
+    margin-left:10%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the element completely */
+}
+
+@media (max-width: 500px) {
+  .outer-container {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .section-head-text {
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body style="background: url(bg.jpg);
+background-repeat: no-repeat;
+background-size: cover;">
+
+
+<div class="navbar">
+  <a href="index.html">Digital Wellness Academy</a>
+  <a href="product.html" class="right">Product</a>
+  <a href="desighnprocess.html" class="right">Design Process</a>
+  <a href="aboutus.html" class="right">About Us</a>
+  <a href="index.html" class="right">Home</a>
+</div>
+<div class="container">
+    <h1 align="center" class="title-paragraf" style="font-size:50px"></h1>
+    
+    <div class="responsive-container-block outer-container">
+        <div class="responsive-container-block inner-container">
+          <p class="text-blk section-head-text" style="color:#ea5990">
+            MEET OUR CREATOR
+          </p>
+          <br>
+          <div class="responsive-container-block">
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img round-image" src="team/1.jpg">
+                </div>
+                <p class="text-blk name" style="font-size: 16px;">
+                    Prischa Rachmita Andeansyah Putri
+                </p>
+                <p class="text-blk position">
+                    Web Programmer
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="https://www.instagram.com/prischamith?igsh=MTJvaGg3czJ2dzd4Zw==" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img round-image" src="team/2.jpg" width="300px" height="300px">
+                </div>
+                <p class="text-blk name" style="font-size: 16px;">
+                    Allea Syafitri Tagiyah
+                </p>
+                <p class="text-blk position">
+                    App Programmer
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="https://www.instagram.com/aleleaaaa?igsh=dmRvY2JmOWs4bjJ4" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img round-image" src="team/3.jpg">
+                </div>
+                <p class="text-blk name" style="font-size: 16px;">
+                    Khayla Dezi Thaliqah
+                </p>
+                <p class="text-blk position">
+                    Content Writer
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="https://www.instagram.com/khaylaadez?igsh=MXQ1Z3p2YThvMnQ3cw==" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+              <div class="team-card">
+                <div class="img-wrapper">
+                  <img class="team-img round-image" src="team/4.jpg">
+                </div>
+                <p class="text-blk name" style="font-size: 15px;">
+                    Syaffana Nabila Ramadhani Rangkuty
+                </p>
+                <p class="text-blk position">
+                    Graphic Designer
+                </p>
+                <div class="social-media-links">
+                  <a href="http://www.twitter.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                  </a>
+                  <a href="http://www.facebook.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                  </a>
+                  <a href="https://www.instagram.com/syffbiaa?igsh=M2k3NmxwbXh3ajRu" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                  </a>
+                  <a href="http://www.gmail.com/" target="_blank">
+                    <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+<div class="footer">
+  <h2>Digital Wellness Academy</h2>
+</div>
+
+</body>
+</html>
